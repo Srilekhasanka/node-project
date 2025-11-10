@@ -6,7 +6,7 @@ import {
   updateUser,
   deleteUser
 } from '../user/user.controller'
-
+//////////////////test
 const router = Router()
 
 router.get('/', getUsers)
