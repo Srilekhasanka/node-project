@@ -1,19 +1,11 @@
 import { Router } from 'express'
-import {
-  getUsers,
-  getUserById,
-  createUser,
-  updateUser,
-  deleteUser
-} from '../user/user.controller'
-//////////////////test
+import { userController } from './user.controller'
+
 const router = Router()
 
-router.get('/', getUsers)
-router.get('/:id', getUserById)
-router.post('/', createUser)
-router.put('/:id', updateUser)
-router.delete('/:id', deleteUser)
+router.post('/', userController.create)
+router.get('/', userController.get)
+router.put('/:userId', userController.update)
+router.delete('/:userId', userController.delete)
 
 export { router as userRoutes }
-export default router
